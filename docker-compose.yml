@@ -27,7 +27,8 @@ services:
     environment:                                                                                                                                                                               
       DATABASE_URL: postgresql://${DB_USER:-juyeon}:${DB_PASSWORD:-mysecretpassword}@postgres-db:5432/${DB_NAME:-juyeon_twitter}?schema=public                                                                                                                                                                                                                                          
       NEXTAUTH_SECRET: ${NEXTAUTH_SECRET:-supersecretnextauthkeyforyoutubebrandclub}                                                                                                           
-      NEXTAUTH_URL: "http://localhost:3000"                                                                                                                                                    
+      NEXTAUTH_URL: "http://localhost:3000"       
+      INVITE_CODE: "anything"                                                                                                                                             
     depends_on:                                                                                                                                                                                
       - postgres-db                                                                                                                                                                            
     networks:                                                                                                                                                                                  
