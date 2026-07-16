@@ -31,4 +31,4 @@ ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"                                                                                                                  
                                                                                                                                         
 # 실행 전 마이그레이션 적용 후 앱 실행                                                                                                  
-CMD ["sh", "-c", "npx prisma migrate deploy && npm run start"]
+CMD ["sh", "-c", "npx prisma generate && npx prisma migrate deploy && npm run start"]
